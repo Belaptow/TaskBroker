@@ -15,6 +15,9 @@ namespace TaskBroker
             _logger = logger;
             State = new ConcurrentDictionary<Guid, Lazy<IWorkerQueue>>();
         }
+        public BrokerService(Action<string, object[]> logError, Action<string, object[]> logDebug) : this(new ActionLogger(logError, logDebug))
+        {
+        }
         protected ConcurrentDictionary<Guid, Lazy<IWorkerQueue>> State { get; }
 
         protected IWorkerQueue GetOrAdd(Guid queueId)
