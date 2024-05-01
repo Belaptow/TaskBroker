@@ -3,9 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.6.33829.357
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskBroker", "TaskBroker\TaskBroker.csproj", "{C60A4FFB-B0A3-4DB4-963B-00E117DBFA74}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestingSuite", "TestingSuite\TestingSuite.csproj", "{FB81D729-E79B-404D-8769-69DB4726AC2C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TaskBroker", "TaskBroker\TaskBroker.csproj", "{C60A4FFB-B0A3-4DB4-963B-00E117DBFA74}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +15,6 @@ Global
 		{C60A4FFB-B0A3-4DB4-963B-00E117DBFA74}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C60A4FFB-B0A3-4DB4-963B-00E117DBFA74}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C60A4FFB-B0A3-4DB4-963B-00E117DBFA74}.Release|Any CPU.Build.0 = Release|Any CPU
-		{FB81D729-E79B-404D-8769-69DB4726AC2C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{FB81D729-E79B-404D-8769-69DB4726AC2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{FB81D729-E79B-404D-8769-69DB4726AC2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{FB81D729-E79B-404D-8769-69DB4726AC2C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
