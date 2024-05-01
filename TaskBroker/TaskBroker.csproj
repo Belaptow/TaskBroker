@@ -14,7 +14,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="BLPTW.SharedLib" Version="1.0.0" />
+    <ProjectReference Include="..\..\SharedLib\SharedLib\SharedLib.csproj" />
   </ItemGroup>
 
 
