@@ -11,4 +11,10 @@
     <ProjectReference Include="..\TaskBroker\TaskBroker.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Reference Include="SharedLib">
+      <HintPath>\\server1\D\NetworkFolder\PublishedProjects\SharedLib\net6.0\SharedLib.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
 </Project>

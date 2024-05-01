@@ -1,4 +1,5 @@
-﻿using System.Collections.Concurrent;
+﻿using SharedLib;
+using System.Collections.Concurrent;
 using System.Diagnostics;
 
 namespace TaskBroker
@@ -74,8 +75,7 @@ namespace TaskBroker
         public void CleanupStaleQueues(TimeSpan sinceLastActivity)
         {
             var oldest = DateTime.Now.Subtract(sinceLastActivity);
-            foreach(var pair in State.Where(pair => pair.Value.IsValueCreated && pair.Value.Value.LastActivity < oldest))
-                DeinitializeQueue(pair.Key);
+            State.Where(pair => pair.Value.IsValueCreated && pair.Value.Value.LastActivity < oldest).ForEach(pair => DeinitializeQueue(pair.Key));
         }
     }
 }
