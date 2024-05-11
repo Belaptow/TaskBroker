@@ -85,7 +85,7 @@ namespace TaskBroker
             Stopwatch stopWatch = new Stopwatch();
             stopWatch.Start();
 
-            Task.Run(() => { while (AnyWorkers) { Thread.Sleep(1000); } }).Wait(60000);
+            Task.Run(() => { while (AnyWorkers) { Task.Delay(1000).Wait(); } }).Wait(60000);
 
             stopWatch.Stop();
             long duration = stopWatch.ElapsedMilliseconds;

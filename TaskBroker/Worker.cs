@@ -64,7 +64,7 @@ namespace TaskBroker
         {
             //return true;
             var waiterCTS = new CancellationTokenSource();
-            var waitToStart = Task.Run(() => { while (_task.Status == TaskStatus.Created) Thread.Sleep(10); }, waiterCTS.Token);
+            var waitToStart = Task.Run(() => { while (_task.Status == TaskStatus.Created) Task.Delay(10).Wait(); }, waiterCTS.Token);
             if (waitToStart.Wait(TimeSpan.FromHours(1))) return true;
             
             waiterCTS.Cancel();
